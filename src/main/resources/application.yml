@@ -1,1 +1,12 @@
+openai:
+  model: gpt-3.5-turbo
+  api-url: https://api.openai.com/v1/chat/completions
+  api-key: ${SECRET_KEY_OPENAI}
+
+telegram:
+  bot:
+    token: ${BOT_TOKEN}
+    username: ${BOT_USERNAME}
+
+
 
