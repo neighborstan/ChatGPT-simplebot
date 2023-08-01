@@ -11,6 +11,9 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
+/**
+ * Класс, который описывает бота
+ */
 @Component
 public class TelegramBot extends TelegramLongPollingBot {
 
@@ -23,9 +26,12 @@ public class TelegramBot extends TelegramLongPollingBot {
         super(new DefaultBotOptions(), token);
 
         this.chatGptService = chatGptService;
-
     }
 
+    /**
+     * Метод, который будет вызываться при получении сообщения от пользователя
+     * @param update объект, содержащий информацию о сообщении
+     */
     @Override
     public void onUpdateReceived(Update update) {
         if (update.hasMessage() && update.getMessage().hasText()) {

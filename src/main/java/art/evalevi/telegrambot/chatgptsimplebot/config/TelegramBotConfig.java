@@ -10,6 +10,12 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 @Configuration
 public class TelegramBotConfig {
 
+    /**
+     * Создание бина для регистрации бота в Telegram
+     * @param telegramBot бот
+     * @return объект для регистрации бота в Telegram
+     * @throws TelegramApiException исключение при регистрации бота
+     */
     @Bean
     public TelegramBotsApi telegramBotsApi(TelegramBot telegramBot) throws TelegramApiException {
         TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);

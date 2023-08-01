@@ -6,6 +6,9 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/**
+ * Класс для ответа от API GPT-3
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

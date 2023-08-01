@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
+/**
+ * Сервис для взаимодействия с OpenAI API
+ */
 @Service
 public class ChatGptService {
 
@@ -21,6 +24,11 @@ public class ChatGptService {
         this.webClient = webClient;
     }
 
+    /**
+     * Генерация ответа на сообщение пользователя
+     * @param prompt сообщение пользователя
+     * @return ответ на сообщение пользователя
+     */
     public String generateMessage(String prompt) {
         ChatRequest request = new ChatRequest(model, prompt);
         ChatResponse response;

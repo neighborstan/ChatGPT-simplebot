@@ -6,6 +6,9 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/**
+ * Класс для запроса к API GPT-3
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -20,6 +23,9 @@ public class ChatRequest {
         this.messages = List.of(new Message("user", prompt));
     }
 
+    /**
+     * Класс для сообщения в запросе к API GPT-3
+     */
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
